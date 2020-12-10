@@ -1,160 +1,202 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6.5.0/picnic.min.css">
-    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
     <title>My Recipes</title>
-    <style>
-        .container {
-            width: 80%;
-            margin: auto;
-            margin-top: 3em;
-        }
 
-        .mybutton {
-            background: #f7786b;
-            font-size: 0.75em;
-        }
-    </style>
 </head>
+
 <body class="container">
-    
-    
 
-<h1>My Recipes</h1>
+    <input type="checkbox" id="takki">
+    <label class="menu" for="takki" id="sticky">&#9776</label>
+    <input type="text" id="search">
 
-<div class="flex three demo">
+    <nav>
+
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Nutrition</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Social media</a></li>
+        </ul>
+
+    </nav>
 
 
 
-    <div>
-
-        <article class="card">
-            <header>
-                <img src="img/bread.jpg">
-            </header>
-            <footer>
-                <h2>Faux French Bread</h2>
-                <small>2019-04-17</small>
-                <p>
-                    Not quite french bread which has great taste and stays fresh for longer.
-                </p>
-                <a class="button" href="posts/french-bread.html">Recipe</a>
-                <br>
-                
-                
-                    <button class="shyButton mybutton">Bread</button>
-                
-            </footer>
-            
-        </article>
-
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's
+            Fine</a>
     </div>
 
-<!-- 
-    <p>
-            <h2>1: <a href="posts/french-bread.html">Faux French Bread</a> <small>2019-04-17</small></h2>
-            Not quite french bread which has great taste and stays fresh for longer.
-        </p> -->
+
+    <h1>My Recipes</h1>
+
+    <div class="chef">
+
+        <svg version="1.1" height="250" width="200" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+            xml:space="preserve">
+
+            <g>
+                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                    <path
+                        d="M4653.3,4945.2c-188.5-65.3-266.4-105.6-389.5-206.1c-57.8-47.7-103-57.8-241.3-57.8c-434.8,0-794.1-203.6-962.5-547.8c-70.4-143.3-82.9-193.5-82.9-356.9c0-158.3,12.6-213.6,72.9-339.3c88-175.9,251.3-344.3,422.2-429.7l120.6-60.3v-291.5c0-281.5-2.5-294-70.4-384.5c-191-241.3-294-520.2-331.7-902.2c-55.3-527.7,85.4-1256.5,341.8-1769.2l82.9-165.8l-143.2-82.9c-580.5-326.7-1120.8-912.2-1412.3-1535.5c-243.8-522.7-339.3-967.5-339.3-1595.8c0-595.6-40.2-552.9,691.1-723.8c882.1-203.6,1394.8-263.9,2362.3-281.5c598.1-10,864.5-5,1206.3,27.7c570.5,52.8,1249,168.3,1774.2,299c555.4,140.8,525.2,98,525.2,703.7c-2.5,377-12.6,502.6-60.3,721.3c-110.6,512.7-271.4,899.7-547.8,1316.9c-289,439.8-824.3,919.8-1244,1123.3c-67.9,32.7-120.6,65.3-120.6,72.9c0,10.1,50.3,105.5,113.1,216.1c366.9,640.8,492.5,1412.3,324.2,1970.2c-52.8,180.9-120.6,309.1-238.7,469.9l-98,130.7v351.8V2970l90.5,42.7c256.3,123.1,490,444.8,525.2,726.3c65.3,507.6-394.6,992.7-980.1,1035.4c-125.7,7.5-216.1,32.7-316.6,85.4C5407.2,5023.1,4985,5055.8,4653.3,4945.2z M5409.7,4565.8c52.8-20.1,148.3-67.8,208.6-110.6c98-65.3,135.7-75.4,284-75.4c231.2,0,399.6-55.3,537.8-175.9c359.4-316.7,175.9-799.2-344.3-904.7c-153.3-30.2-251.3-22.6-447.4,40.2c-108.1,35.2-133.2,35.2-238.7,0c-266.4-85.4-525.2-72.9-741.4,37.7c-125.7,62.8-193.5,60.3-351.8-20.1c-243.8-123.1-600.6-82.9-784.1,88c-88,82.9-163.3,241.3-165.9,341.8c0,120.6,95.5,286.5,208.6,364.4c165.9,113.1,273.9,138.2,525.2,118.1l221.1-15.1l130.7,118.1C4721.1,4608.5,5078,4681.4,5409.7,4565.8z M4748.7,2919.7c196-55.3,439.8-57.8,635.8-12.6c120.6,27.6,165.9,27.6,289,0c77.9-20.1,186-35.2,238.7-35.2h93V2696v-175.9H5000.1H3994.8v173.4v170.9l145.8,17.6c77.9,10.1,193.5,40.2,256.3,65.3c62.8,25.1,130.7,37.7,150.8,30.2C4567.8,2970,4658.3,2944.8,4748.7,2919.7z M6098.3,1987.4c233.7-241.2,319.2-477.5,316.6-887.1c-5-643.3-304.1-1319.4-786.6-1781.8c-284-268.9-462.4-354.4-753.9-354.4c-188.5,0-228.7,7.5-346.8,72.9c-475,263.9-844.4,975.1-934.9,1801.9c-57.8,517.7,40.2,967.5,258.8,1198.7l77.9,80.4h1020.3h1020.3L6098.3,1987.4z M6605.9-1174.1c608.1-429.7,1060.5-1145.9,1226.4-1942.6c27.6-133.2,42.7-331.7,42.7-555.4l2.5-351.8l-125.7-32.7c-294-75.4-1007.7-211.1-1372.1-258.8c-1339.5-170.9-2824.7-80.4-4081.2,246.3l-175.9,45.2l2.5,351.8c0,374.5,40.2,615.7,148.3,950c183.4,565.4,552.9,1103.2,992.7,1447.5c206.1,163.3,507.6,351.8,562.9,351.8c15.1,0,85.4-57.8,153.3-128.2c464.9-480,1075.6-540.3,1638.5-165.9c93,62.8,226.2,170.9,294,241.3l123.1,125.7l191-98C6334.5-1000.7,6502.9-1103.7,6605.9-1174.1z" />
+                </g>
+            </g>
+        </svg>
+        <svg version="1.1" height="250" width="200" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+            xml:space="preserve">
+            <g>
+                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                    <path
+                        d="M5169.2,3437.7c-75.6-75.6-119.9-229.4-99-333.6c7.8-46.9,80.8-148.6,164.2-239.8c219-237.2,242.4-299.7,179.9-513.5c-57.3-187.7,93.8-255.4,179.8-80.8c130.3,255.4,96.4,401.4-151.2,669.9c-101.6,106.9-182.5,205.9-182.5,218.9c0,41.7,59.9,159,80.8,159c28.7,0,52.1,80.8,36.5,132.9C5354.3,3521.1,5244.9,3513.3,5169.2,3437.7z" />
+                    <path
+                        d="M4556.7,2950.3c-80.8-112.1-75.6-265.9,13-458.7c93.8-203.3,112.1-271.1,91.2-333.6c-28.7-73,15.6-143.4,91.2-143.4c143.3,0,161.6,211.1,41.7,479.6c-86,190.3-99.1,297.1-49.5,380.5c26.1,39.1,26.1,65.2,5.2,99C4700.1,3051.9,4619.3,3041.5,4556.7,2950.3z" />
+                    <path
+                        d="M4895.6,2603.6c-36.5-114.7-10.4-218.9,101.7-391c93.8-151.2,101.6-242.4,26.1-338.8c-59.9-75.6-57.3-140.7,5.2-179.8c62.5-39.1,117.3-7.8,195.5,112.1c101.6,153.8,93.8,273.7-31.3,474.4c-62.6,104.3-99,195.5-99,255.4c-2.6,117.3-28.7,156.4-106.9,156.4C4939.9,2692.2,4919,2671.4,4895.6,2603.6z" />
+                    <path
+                        d="M4131.9,1467.2c-127.7-33.9-278.9-109.5-385.8-200.7c-80.8-67.8-96.4-73-294.5-65.2c-636,26.1-1235.5-351.9-1657.7-1045.2C1606.2-154.1,1429-636.3,1429-836.9c0-119.9-41.7-156.4-247.6-221.6c-284.1-88.6-693.3-299.7-839.3-430.1c-787.1-706.4,398.8-1428.4,2781.1-1696.8c1133.8-125.1,2619.5-125.1,3753.3,0C8732.3-2976.9,9894.8-2492,9900-1923.8c0,294.5-346.7,594.3-956.6,821l-187.7,70.4l-15.6,148.6c-57.4,526.5-234.6,959.2-550,1347.6C7934.7,776.5,7489,1060.6,7085,1170c-101.7,26.1-291.9,46.9-474.4,52.1c-278.9,7.8-318,15.6-461.3,88.6c-315.4,159-633.4,192.9-972.2,106.9c-195.5-49.5-198.1-49.5-362.3,0C4621.9,1477.6,4275.3,1503.7,4131.9,1467.2z M4666.2,1037.1c26.1-10.4,86-91.2,135.5-179.8c200.7-359.7,359.7-873.2,469.2-1527.4c36.5-208.5,73-401.4,83.4-424.8c41.7-112.1,229.4-130.3,323.2-31.3c54.8,57.4,57.4,78.2,41.7,239.8C5669.7-399.1,5458.6,422,5283.9,813c-54.7,119.9-67.8,177.3-49.5,195.5c15.7,15.6,135.5,28.7,281.5,28.7c216.4-2.6,273.7-10.4,401.4-70.4c135.5-62.5,156.4-83.4,237.2-247.6c179.9-359.7,312.8-815.8,409.2-1428.3c46.9-291.9,62.6-346.7,119.9-396.2c80.8-75.6,166.8-75.6,255.4-5.2c54.7,41.7,67.8,75.6,67.8,164.2c0,318-260.7,1399.7-409.2,1691.6l-36.5,70.4h112.1c174.6,0,432.7-70.4,646.4-177.2c276.3-132.9,623-482.2,774.1-774.1c166.8-325.8,226.8-552.6,226.8-860.1c0-357.1-86-534.3-333.7-677.7c-338.8-198.1-591.6-226.8-2009.6-224.1c-2637.7,7.8-3542.2,122.5-3969.6,510.8c-200.7,179.9-229.4,391-104.3,795C2132.7,150.9,2734.8,747.8,3290,784.3c276.3,18.3,310.2,2.6,417-169.4c153.8-245,276.3-604.7,391-1133.8c36.5-169.4,224.2-232,341.5-112.1c80.8,78.2,80.8,140.8,0,474.4c-75.6,315.4-213.7,685.5-341.5,914.9c-49.5,88.6-83.4,174.6-73,190.3c7.8,15.6,65.2,52.1,125.1,80.8c83.4,39.1,146,46.9,289.3,36.5C4541.1,1060.6,4642.8,1047.5,4666.2,1037.1z M1429-1225.3c0-20.8,36.5-106.9,80.8-195.5c218.9-443.1,797.6-690.7,1900.1-813.2c615.1-70.4,3417.1-106.9,3930.5-52.1c638.6,70.4,1058.2,265.9,1243.3,583.9c33.9,60,83.4,182.5,106.9,276.3c26.1,93.8,49.5,172,52.1,177.2c7.8,13,458.8-177.2,557.8-237.2c164.2-96.4,315.4-232,357.1-318c258-542.1-1248.5-1079.1-3484.9-1238.1c-487.4-36.5-1858.4-36.5-2345.8,0c-1472.7,104.3-2692.5,383.2-3226.8,732.4C84-1970.7,263.9-1621.5,1118.8-1295.7C1426.4-1178.4,1429-1178.4,1429-1225.3z" />
+                    <path
+                        d="M3235.3,369.9c-185-91.2-203.3-289.3-31.3-385.8c62.5-33.9,80.8-33.9,192.9,7.8c164.2,65.2,221.6,125.1,221.6,237.2C3618.4,414.2,3449,476.7,3235.3,369.9z" />
+                    <path
+                        d="M7184.1,359.4c-73-41.7-86-65.2-112.1-239.8c-36.5-239.8,182.5-388.4,338.8-229.4c62.6,60,80.8,148.6,70.4,323.2C7473.4,346.4,7309.1,427.2,7184.1,359.4z" />
+                    <path
+                        d="M2336-500.7c-185-96.4-224.2-205.9-122.5-336.2c83.4-106.9,289.3-80.8,448.3,57.3c67.8,60,57.4,203.3-20.8,278.9C2562.8-419.9,2492.4-419.9,2336-500.7z" />
+                    <path
+                        d="M3198.8-537.2c-96.4-96.4-93.8-143.4,2.6-297.1c83.4-132.9,174.6-185,276.3-159c153.8,39.1,182.5,213.7,62.5,385.8C3422.9-435.5,3321.3-414.7,3198.8-537.2z" />
+                    <path
+                        d="M7403-740.5c-99-39.1-140.8-289.3-70.4-422.2c62.6-125.1,226.8-148.6,320.6-46.9c83.4,88.6,83.4,349.3-2.6,430.1C7593.3-724.9,7483.8-706.6,7403-740.5z" />
+                    <path
+                        d="M3084.1-1196.7c-75.6-44.3-114.7-104.3-117.3-177.2c0-106.9,70.4-177.2,218.9-221.6c213.7-62.5,328.4,5.2,328.4,190.3c0,93.8-80.8,169.4-224.2,208.5C3159.7-1160.1,3149.3-1160.1,3084.1-1196.7z" />
+                    <path
+                        d="M4809.6-1269.6c-83.4-65.2-119.9-271.1-65.2-383.2c46.9-99,151.2-146,245-112.1c109.5,41.7,138.1,101.7,140.7,278.9c0,143.4-7.8,166.8-67.8,213.7C4973.8-1204.5,4895.6-1201.8,4809.6-1269.6z" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="flex three demo" id="flux">
 
 
 
-    <div>
+        <div>
 
-        <article class="card">
-            <header>
-                <img src="img/cond-milk-cake.jpg">
-            </header>
-            <footer>
-                <h2>Sweetened Condensed Milk Cake</h2>
-                <small>2019-04-15</small>
-                <p>
-                    A sweet and soft cake which is very easy to prepare and tastes great with a cup of tea.
-                </p>
-                <a class="button" href="posts/condensed-milk-cake.html">Recipe</a>
-                <br>
-                
-                
+            <article class="card">
+                <header>
+                    <img src="bread.jpg">
+                </header>
+                <footer>
+                    <h2>Faux French Bread</h2>
+                    <small>2019-04-17</small>
+                    <p>
+                        Not quite french bread which has great taste and stays fresh for longer.
+                    </p>
+                    <a class="button" href="posts/french-bread.html">Recipe</a>
+                    <br>
+
+
+                    <button class="shyButton mybutton">Bread</button>
+
+                </footer>
+
+            </article>
+
+        </div>
+
+
+
+
+        <div>
+
+            <article class="card">
+                <header>
+                    <img src="cond-milk-cake.jpg">
+                </header>
+                <footer>
+                    <h2>Sweetened Condensed Milk Cake</h2>
+                    <small>2019-04-15</small>
+                    <p>
+                        A sweet and soft cake which is very easy to prepare and tastes great with a cup of tea.
+                    </p>
+                    <a class="button" href="posts/condensed-milk-cake.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Cake</button>
-                
+
                     <button class="shyButton mybutton"> Sweet</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
-    <p>
-            <h2>2: <a href="posts/condensed-milk-cake.html">Sweetened Condensed Milk Cake</a> <small>2019-04-15</small></h2>
-            A sweet and soft cake which is very easy to prepare and tastes great with a cup of tea.
-        </p> -->
+            </article>
+
+        </div>
 
 
 
-    <div>
 
-        <article class="card">
-            <header>
-                <img src="img/doughnuts.jpg">
-            </header>
-            <footer>
-                <h2>Old Fashioned Doughnuts</h2>
-                <small>2019-04-14</small>
-                <p>
-                    Old fashioned sugar dusted doughnuts. Better than any store bought doughnuts.
-                </p>
-                <a class="button" href="posts/doughnuts.html">Recipe</a>
-                <br>
-                
-                
+
+        <div>
+
+            <article class="card">
+                <header>
+                    <img src="doughnuts.jpg">
+                </header>
+                <footer>
+                    <h2>Old Fashioned Doughnuts</h2>
+                    <small>2019-04-14</small>
+                    <p>
+                        Old fashioned sugar dusted doughnuts. Better than any store bought doughnuts.
+                    </p>
+                    <a class="button" href="posts/doughnuts.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Sweet</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
-    <p>
-            <h2>3: <a href="posts/doughnuts.html">Old Fashioned Doughnuts</a> <small>2019-04-14</small></h2>
-            Old fashioned sugar dusted doughnuts. Better than any store bought doughnuts.
-        </p> -->
+            </article>
+
+        </div>
 
 
 
-    <div>
 
-        <article class="card">
-            <header>
-                <img src="img/naan.jpg">
-            </header>
-            <footer>
-                <h2>Naan Bread</h2>
-                <small>2019-04-13</small>
-                <p>
-                    Soft and fluffy home made naan bread which doesn't need you to fire up the oven. Great with curries or tear chunks and dunk in honey butter.
-                </p>
-                <a class="button" href="posts/naan.html">Recipe</a>
-                <br>
-                
-                
+        <div>
+
+            <article class="card">
+                <header>
+                    <img src="naan.jpg">
+                </header>
+                <footer>
+                    <h2>Naan Bread</h2>
+                    <small>2019-04-13</small>
+                    <p>
+                        Soft and fluffy home made naan bread which doesn't need you to fire up the oven. Great with
+                        curries or tear chunks and dunk in honey butter.
+                    </p>
+                    <a class="button" href="posts/naan.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Bread</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
+            </article>
+
+        </div>
+
+        <!-- 
     <p>
             <h2>4: <a href="posts/naan.html">Naan Bread</a> <small>2019-04-13</small></h2>
             Soft and fluffy home made naan bread which doesn't need you to fire up the oven. Great with curries or tear chunks and dunk in honey butter.
@@ -162,33 +204,33 @@
 
 
 
-    <div>
+        <div>
 
-        <article class="card">
-            <header>
-                <img src="img/pide.jpg">
-            </header>
-            <footer>
-                <h2>Turkish Cheese Pide</h2>
-                <small>2019-04-12</small>
-                <p>
-                    Traditional Turkish pide stuffed with cheese. Great as an appetizer or for breakfast or lunch.
-                </p>
-                <a class="button" href="posts/turkish-pide.html">Recipe</a>
-                <br>
-                
-                
+            <article class="card">
+                <header>
+                    <img src="pide.jpg">
+                </header>
+                <footer>
+                    <h2>Turkish Cheese Pide</h2>
+                    <small>2019-04-12</small>
+                    <p>
+                        Traditional Turkish pide stuffed with cheese. Great as an appetizer or for breakfast or lunch.
+                    </p>
+                    <a class="button" href="posts/turkish-pide.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Bread</button>
-                
+
                     <button class="shyButton mybutton"> Savoury</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
+            </article>
+
+        </div>
+
+        <!-- 
     <p>
             <h2>5: <a href="posts/turkish-pide.html">Turkish Cheese Pide</a> <small>2019-04-12</small></h2>
             Traditional Turkish pide stuffed with cheese. Great as an appetizer or for breakfast or lunch.
@@ -196,31 +238,31 @@
 
 
 
-    <div>
+        <div>
 
-        <article class="card">
-            <header>
-                <img src="img/rolls.jpg">
-            </header>
-            <footer>
-                <h2>Lionhouse Dinner Rolls</h2>
-                <small>2019-04-11</small>
-                <p>
-                    Soft and fluffy dinner rolls. Great as a side or in breakfast with coffee.
-                </p>
-                <a class="button" href="posts/lionhouse-rolls.html">Recipe</a>
-                <br>
-                
-                
+            <article class="card">
+                <header>
+                    <img src="rolls.jpg">
+                </header>
+                <footer>
+                    <h2>Lionhouse Dinner Rolls</h2>
+                    <small>2019-04-11</small>
+                    <p>
+                        Soft and fluffy dinner rolls. Great as a side or in breakfast with coffee.
+                    </p>
+                    <a class="button" href="posts/lionhouse-rolls.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Bread</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
+            </article>
+
+        </div>
+
+        <!-- 
     <p>
             <h2>6: <a href="posts/lionhouse-rolls.html">Lionhouse Dinner Rolls</a> <small>2019-04-11</small></h2>
             Soft and fluffy dinner rolls. Great as a side or in breakfast with coffee.
@@ -228,33 +270,33 @@
 
 
 
-    <div>
+        <div>
 
-        <article class="card">
-            <header>
-                <img src="img/challah.jpg">
-            </header>
-            <footer>
-                <h2>Honey Challah</h2>
-                <small>2019-04-10</small>
-                <p>
-                    A soft and sweet traditional bread infused with honey flavour.
-                </p>
-                <a class="button" href="posts/honey-challah.html">Recipe</a>
-                <br>
-                
-                
+            <article class="card">
+                <header>
+                    <img src="challah.jpg" height="400" width="395">
+                </header>
+                <footer>
+                    <h2>Honey Challah</h2>
+                    <small>2019-04-10</small>
+                    <p>
+                        A soft and sweet traditional bread infused with honey flavour.
+                    </p>
+                    <a class="button" href="posts/honey-challah.html">Recipe</a>
+                    <br>
+
+
                     <button class="shyButton mybutton">Bread</button>
-                
+
                     <button class="shyButton mybutton"> Sweet</button>
-                
-            </footer>
-            
-        </article>
 
-    </div>
+                </footer>
 
-<!-- 
+            </article>
+
+        </div>
+
+        <!-- 
     <p>
             <h2>7: <a href="posts/honey-challah.html">Honey Challah</a> <small>2019-04-10</small></h2>
             A soft and sweet traditional bread infused with honey flavour.
@@ -262,11 +304,12 @@
 
 
 
-</div>
+    </div>
 
 
 
     <br>
 
 </body>
+
 </html>
